@@ -1,0 +1,23 @@
+{
+  "name": "writer",
+  "version": "1.0.0",
+  "description": "Service that logs current time each 10s",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexKom9/tcs.git"
+  },
+  "keywords": [
+    "time",
+    "logger"
+  ],
+  "author": "Alex Komar",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/AlexKom9/tcs/issues"
+  },
+  "homepage": "https://github.com/AlexKom9/tcs#readme"
+}

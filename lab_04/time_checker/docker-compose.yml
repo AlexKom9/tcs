@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  time_checker_writer:
+    build: ./writer
+    volumes:
+      - ./logs:/logs
+
+  time_checker_reader:
+    build: ./reader
+    volumes:
+      - ./logs:/logs
