@@ -29,14 +29,14 @@ services:
     networks:
       - lab
 
-  # consumer:
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile-consumer
-  #   depends_on:
-  #     - kafka
-  #   networks:
-  #     - lab
+  consumer:
+    build:
+      context: .
+      dockerfile: Dockerfile-consumer
+    depends_on:
+      - kafka
+    networks:
+      - lab
 
 networks:
   lab:

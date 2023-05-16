@@ -1,17 +1,22 @@
-const kafka = require("kafka-node");
+const { Kafka } = require("kafkajs");
 
-const Consumer = kafka.Consumer;
+const run = async () => {
+  const kafka = new Kafka({
+    clientId: "lab_05",
+    brokers: ["kafka:9092"],
+  });
 
-const client = new kafka.KafkaClient({ kafkaHost: "localhost:9092" });
+  const consumer = kafka.consumer({ groupId: "common-group" });
 
-const consumer = new Consumer(client, [{ topic: "common", partition: 0 }], {
-  autoCommit: true,
-});
+  await consumer.connect();
 
-consumer.on("message", (message) => {
-  console.log("Received message:", message.value);
-});
+  await consumer.subscribe({ topic: "common", fromBeginning: true });
 
-consumer.on("error", (error) => {
-  console.error("Error:", error);
-});
+  await consumer.run({
+    eachMessage: async ({ topic, partition, message }) => {
+      console.log(`Message received: ${message.value.toString()}`);
+    },
+  });
+};
+
+run();
