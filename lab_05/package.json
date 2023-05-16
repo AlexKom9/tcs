@@ -1,0 +1,20 @@
+{
+  "name": "lab_05",
+  "version": "1.0.0",
+  "description": "Kafka & Zookeeper intro",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "docker",
+    "kafka",
+    "zookeeper"
+  ],
+  "author": "Alex Komar",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "kafka-node": "^5.0.0",
+    "kafkajs": "^2.2.4"
+  }
+}
