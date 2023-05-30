@@ -16,12 +16,24 @@ sudo docker run \
   gcr.io/cadvisor/cadvisor:$VERSION
 ```
 
-## System state screen
+## Initial system state
 
-![Screen 1](./screens/system-1.jpg)
-![Screen 2](./screens/system-2.jpg)
+![Screen 1](./screens/docker_ps_initial.jpg)
+![Screen 2](./screens/system_state_initial.jpg)
+
+## Lab 4 system state
+
+![screen 1](./screens/docker_ps_lab_4.jpg)
+![screen 2](./screens/system_state_lab_4.jpg)
+
+## Lab 5 system state
+
+![Screen 1](./screens/docker_ps_lab_5.jpg)
+![Screen 2](./screens/system_state_lab_5.jpg)
 
 ## Error 😕
+
+http://localhost:8080/docker/
 
 ```console
 failed to get docker info: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
